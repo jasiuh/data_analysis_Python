@@ -240,7 +240,7 @@ print 'Decision Tree: ', jaguar_tree
 #Neural Network
 
 #set "KERAS_BACKEND=theano"
-#set ìMKL_THREADING_LAYER=GNUî
+#set ‚ÄúMKL_THREADING_LAYER=GNU‚Äù
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.regularizers import l2, l1
@@ -281,23 +281,3 @@ gp = [[8,400,230,4278,9.50]]
 gp_nn = model.predict([gp])
 print "Neural Network - Pontiac Grand Prix (16 MPG): ", gp_nn
 
-
-
-
-#Taken from http://www.classicandperformancecar.com/jaguar/xjs/1750/1975-1981-jaguar-xj-s
-
-#1975 Jaguar XJ-S - actual MPG is ~14
-
-jaguar = [[12,326,285,3858,6.9]]
-
-jaguar_regression = regression.predict(jaguar)
-jaguar_gbr = gbr.predict(jaguar)
-jaguar_svm = svm.predict(jaguar)
-jaguar_tree = tree.predict(jaguar)
-
-#Let's see which model is most accurate:
-print 'MPG predictions for Jaguar XJ-S:'
-print 'Regression: ', jaguar_regression
-print 'Gradient Boost: ', jaguar_gbr
-print 'Support Vector Machine: ', jaguar_svm
-print 'Decision Tree: ', jaguar_tree
